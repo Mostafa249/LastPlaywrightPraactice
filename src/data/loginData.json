@@ -1,0 +1,9 @@
+{
+    "invalidUserName": "Mostafa",
+    "invalidPassword": "12345",
+    "validUserName": "standard_user",
+    "validPassword": "secret_sauce",
+    "emptyPasswordMessage": "Password is required",
+    "emptyUserNameMessage" : "Username is required",
+    "invalidCredsMessage" : "Username and password do not match any user"
+}

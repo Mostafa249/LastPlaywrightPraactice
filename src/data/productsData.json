@@ -1,0 +1,8 @@
+{
+    "filterOptions": {
+        "ascending": "Name (A to Z)",
+        "descending": "Name (Z to A)",
+        "lowPrice": "Price (low to high)",
+        "highPrice": "Price (high to low)"
+    }
+}

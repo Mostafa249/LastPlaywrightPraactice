@@ -1,0 +1,8 @@
+{
+    "firstName": "Mostaf",
+    "lastName": "Salem",
+    "zipCode": "1234",
+    "emptyFirstName": "Error: First Name is required",
+    "emptyLastName": "Error: Last Name is required",
+    "emptyZipCode": "Error: Postal Code is required"
+}
