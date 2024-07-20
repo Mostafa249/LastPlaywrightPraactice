@@ -36,40 +36,40 @@ test.describe('Test checkout info scenarios', () => {
     });
     test('Verify that  first name is mandatory', async () => {
         info('Enter last name');
-        checkoutInfoPage.enterLastName(checkoutData.lastName);
+        await checkoutInfoPage.enterLastName(checkoutData.lastName);
         info('Enter zip code');
-        checkoutInfoPage.enterZipCode(checkoutData.zipCode);
+        await checkoutInfoPage.enterZipCode(checkoutData.zipCode);
         info('Click on continue button');
-        checkoutInfoPage.clickContinue();
+        await checkoutInfoPage.clickContinue();
         info('Assert on the error message for the first name');
         expect(await checkoutInfoPage.getErrorMessage()).toEqual(checkoutData.emptyFirstName);
         info('All is done !');
     });
     test('Verify that  last name is mandatory', async () => {
         info('Enter zip code');
-        checkoutInfoPage.enterZipCode(checkoutData.zipCode);
+        await checkoutInfoPage.enterZipCode(checkoutData.zipCode);
         info('Enter first name');
-        checkoutInfoPage.enterFirstName(checkoutData.firstName);
+        await checkoutInfoPage.enterFirstName(checkoutData.firstName);
         info('Click on continue button');
-        checkoutInfoPage.clickContinue();
+        await checkoutInfoPage.clickContinue();
         info('Assert on the error message for the first name');
         expect(await checkoutInfoPage.getErrorMessage()).toEqual(checkoutData.emptyLastName);
         info('All is done !');
     });
     test('Verify that  zip code is mandatory', async () => {
         info('Enter first name');
-        checkoutInfoPage.enterFirstName(checkoutData.firstName);
+        await checkoutInfoPage.enterFirstName(checkoutData.firstName);
         info('Enter last name');
-        checkoutInfoPage.enterLastName(checkoutData.lastName);
+        await checkoutInfoPage.enterLastName(checkoutData.lastName);
         info('Click on continue button');
-        checkoutInfoPage.clickContinue();
+        await checkoutInfoPage.clickContinue();
         info('Assert on the error message for the first name');
         expect(await checkoutInfoPage.getErrorMessage()).toEqual(checkoutData.emptyZipCode);
         info('All is done !');
     });
     test('Verify that user can cancel checkout and go back to cart screen', async ({ page }) => {
         info('Click on cancel button ');
-        checkoutInfoPage.clickCancel();
+        await checkoutInfoPage.clickCancel();
         info('Assert that user return to cart page');
         expect(await page.getByText('Your Cart').textContent()).toEqual('Your Cart');
         info('All is done !');
@@ -82,7 +82,7 @@ test.describe('Test checkout info scenarios', () => {
         info('Enter zip code');
         await checkoutInfoPage.enterZipCode(checkoutData.zipCode);
         info('Click on continue button');
-        checkoutInfoPage.clickContinue();
+        await checkoutInfoPage.clickContinue();
         info('Assert that user can continue checkout successfully');
         expect(await page.getByText('Checkout: Overview').textContent()).
             toEqual('Checkout: Overview');
