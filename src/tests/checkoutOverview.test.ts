@@ -71,7 +71,7 @@ test.describe('Test checkout overview scenarios ', () => {
             .toEqual((await checkoutOverviewPage.getAddedTax() + await checkoutOverviewPage.getTotalItemsPrice()))
         info('All is done !')
     });
-    test.only('Verify that user can complete the order successfully ', async ({ page }) => {
+    test('Verify that user can complete the order successfully ', async ({ page }) => {
         info('Click on finish Button');
         checkoutOverviewPage.clickFinishButton();
         info('Assert that order is placed successfully');
